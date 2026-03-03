@@ -2,48 +2,57 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Products.css';
 
+// Import all product images
+import greenMachine from '../assets/products/sushi_rolls/sushi/green-machine.png';
+import pickleme from '../assets/products/sushi_rolls/sushi/pickle-me.png';
+import sushi from '../assets/products/sushi_rolls/sushi/sushi.png';
+import sweettree from '../assets/products/sushi_rolls/sushi/sweet-tree.png';
+import mightyMushroom from '../assets/products/sushi_rolls/sushi/mighty-mushroom.png';
+import chicpea from '../assets/products/sushi_rolls/sushi/chic_pea.png';
+import nuttybuddy from '../assets/products/rice_paper_wraps/nutty_buddy.png';
+import spicyshroomwrap from '../assets/products/rice_paper_wraps/spicy_shroom_wrap.png';
+import sweetbean from '../assets/products/rice_paper_wraps/sweet-bean.png';
+import coconutcurrysoup from '../assets/products/soups/soep/coconut_curry_soup.png';
+import dumplingsoup from '../assets/products/soups/soep/dumpling_soup.png';
+import redmisonoodlesoup from '../assets/products/soups/soep/red_miso_noodle_soup.png';
+
 const data = {
   // Home Page: 3 Main Categories
   categories: [
     { 
       title: "Sushi", 
-      img: "/products/sushi_rolls/sushi/green-machine.png", 
+      img: greenMachine, 
       link: "/menu/sushi" 
     },
     { 
       title: "Wraps", 
-      img: "/products/rice_paper_wraps/spicy_shroom_wrap.png", 
+      img: spicyshroomwrap, 
       link: "/menu/wraps-soup" 
     },
     { 
       title: "Soepen", 
-      img: "/products/soups/soep/red_miso_noodle_soup.png", // Updated to likely name
+      img: redmisonoodlesoup,
       link: "/menu/wraps-soup" 
     }
   ],
   // Sushi Menu Page
   sushi: [
-    { title: "Pickle me", img: "/products/sushi_rolls/sushi/pickle-me.png" },
-    { title: "Sushi", img: "/products/sushi_rolls/sushi/sushi.png" },
-    { title: "Sweet tree", img: "/products/sushi_rolls/sushi/sweet-tree.png" },
-    { title: "Mighty-mushroom", img: "/products/sushi_rolls/sushi/mighty-mushroom.png" },
-    { title: "Green machine", img: "/products/sushi_rolls/sushi/green-machine.png" },
-    { title: "Chick pea", img: "/products/sushi_rolls/sushi/chic_pea.png" },
+    { title: "Pickle me", img: pickleme },
+    { title: "Sushi", img: sushi },
+    { title: "Sweet tree", img: sweettree },
+    { title: "Mighty-mushroom", img: mightyMushroom },
+    { title: "Green machine", img: greenMachine },
+    { title: "Chick pea", img: chicpea },
   ],
   // Wraps & Soup Menu Page
   wraps: [
-    { title: "Nutty buddy", img: "/products/rice_paper_wraps/nutty_buddy.png" },
-    { title: "Spicy shroom wrap", img: "/products/rice_paper_wraps/spicy_shroom_wrap.png" },
-    { title: "Sweet bean*", img: "/products/rice_paper_wraps/sweet-bean.png" },
+    { title: "Nutty buddy", img: nuttybuddy },
+    { title: "Spicy shroom wrap", img: spicyshroomwrap },
+    { title: "Sweet bean*", img: sweetbean },
     
-    // Updated Soup Filenames below based on your file tree clipping
-    { title: "Coconut curry soup", img: "/products/soups/soep/coconut_curry_soup.png", type: "round" }, 
-    // Note: If this still fails, try: coconut_curry_starter_soup.png
-    
-    { title: "Dumpling soup", img: "/products/soups/soep/dumpling_soup.png", type: "round" },
-    
-    { title: "Red miso noodle soup", img: "/products/soups/soep/red_miso_noodle_soup.png", type: "round" }
-    // Note: Added _soup.png to match standard naming if the previous one failed
+    { title: "Coconut curry soup", img: coconutcurrysoup, type: "round" }, 
+    { title: "Dumpling soup", img: dumplingsoup, type: "round" },
+    { title: "Red miso noodle soup", img: redmisonoodlesoup, type: "round" }
   ]
 };
 
@@ -52,7 +61,7 @@ const Products = ({ viewMode }) => {
   const isHome = viewMode === 'categories';
 
   return (
-    <div className={`products-grid ${isHome ? 'home-grid' : ''}`}>
+    <div className={`products-grid ${isHome ? 'home-grid' : ''}`}> 
       {items.map((item, index) => (
         <div key={index} className="card-container-outer">
           {isHome ? (
@@ -67,13 +76,12 @@ const Products = ({ viewMode }) => {
             // --- MENU PAGE: Image + Footer ---
             <div className="product-card menu-card">
               <div className="card-image">
-                {/* Shows image. If missing, shows white box (the 'balk') + alt text */}
                 <img 
                   src={item.img} 
                   alt={item.title} 
                   className={item.type === 'round' ? 'img-round' : ''}
                   onError={(e) => {
-                    e.target.style.display = 'none'; // Optional: Hides the broken icon/text if you prefer empty white
+                    e.target.style.display = 'none';
                   }}
                 />
               </div>
