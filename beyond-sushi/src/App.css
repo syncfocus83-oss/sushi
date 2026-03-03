@@ -1,0 +1,57 @@
+/* Base Variables */
+:root {
+  --bg-home: #fceeb5; /* Yellow/Beige */
+  --bg-sushi: #e0acba; /* Pink */
+  --bg-wraps: #bce6f7; /* Blue */
+}
+
+/* Centers the app on the grey background */
+.app-main-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #e0e0e0; /* The grey gutters */
+  min-height: 100vh;
+}
+
+/* The Main Container - FIXED WIDTH */
+.app-container {
+  width: 1000px;        /* Force desktop width */
+  max-width: 100%;      /* Responsive safety */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white; 
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Background Color Handling */
+.page-home { background-color: var(--bg-home); }
+.page-sushi { background-color: var(--bg-sushi); }
+.page-wraps { background-color: var(--bg-wraps); }
+
+.main-content {
+  flex: 1; /* Pushes footer down */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Spacing Helpers */
+.menu-page-padding { padding-top: 40px; }
+.p-40 { padding: 40px; }
+
+:root {
+  --bg-home: #fceeb5; 
+  --bg-sushi: #e0acba; 
+  --bg-wraps: #bce6f7; 
+  --bg-contact: #f49653; /* The Orange Color */
+}
+
+/* ... existing styles ... */
+
+.page-home { background-color: var(--bg-home); }
+.page-sushi { background-color: var(--bg-sushi); }
+.page-wraps { background-color: var(--bg-wraps); }
+.page-contact { background-color: var(--bg-contact); }
+
+/* ... existing styles ... */

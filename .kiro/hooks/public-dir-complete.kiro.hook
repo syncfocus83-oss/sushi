@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Complete Public Directory",
+  "description": "Ensures the entire public directory is completely replicated with all files and assets, nothing missing",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Recreate the entire public directory structure for the Beyond Sushi project completely and comprehensively. Ensure all files, images, and assets are present and nothing is missing. Include all product images in their respective folders (carousel, wraps, soups, sushi), configuration files (robots.txt, sitemap.xml), and all PNG assets. Make it complete."
+  }
+}

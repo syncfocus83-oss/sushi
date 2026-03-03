@@ -1,0 +1,110 @@
+.sushi {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.sushi .container h2 {
+  font-size: 2.5rem;
+  color: #2d5016;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.sushi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.sushi-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sushi-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sushi-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.sushi-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.sushi-card:hover .sushi-image img {
+  transform: scale(1.08);
+}
+
+.sushi-card h3 {
+  font-size: 1.4rem;
+  color: #2d5016;
+  padding: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .sushi {
+    padding: 50px 0;
+  }
+
+  .sushi .container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .sushi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .sushi-image {
+    height: 280px;
+  }
+
+  .sushi-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .sushi {
+    padding: 40px 0;
+  }
+
+  .sushi .container h2 {
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+  }
+
+  .sushi-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sushi-image {
+    height: 240px;
+  }
+
+  .sushi-card h3 {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
+}

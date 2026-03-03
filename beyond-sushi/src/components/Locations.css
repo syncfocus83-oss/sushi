@@ -1,0 +1,140 @@
+.locations {
+  background-color: var(--bg-light);
+}
+
+.opening-hours-section {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.opening-hours-section h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.hours-table td {
+  padding: 0.75rem 1rem;
+}
+
+.hours-table .day {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.hours-table .hours {
+  text-align: right;
+  color: var(--text-dark);
+}
+
+.hours-notes {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--bg-light);
+}
+
+.hours-notes p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.location-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.location-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.location-header h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+.location-info p {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.location-info strong {
+  color: var(--primary-color);
+  display: block;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .opening-hours-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .opening-hours-section {
+    padding: 1rem;
+  }
+
+  .opening-hours-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .hours-table td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .location-card {
+    padding: 1.5rem;
+  }
+
+  .location-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .container-padding h1 { color: #5d4037; margin-bottom: 20px; }
+}

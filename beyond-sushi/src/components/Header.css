@@ -1,0 +1,93 @@
+.header {
+  background-color: #9cd05d; /* Brand Green */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 40px;
+  position: relative;
+  z-index: 1000;
+}
+
+.brand {
+  font-size: 26px;
+  color: white;
+  margin-right: 40px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.brand a { color: white; text-decoration: none; }
+
+.navbar {
+  display: flex;
+  height: 100%; /* Important: Takes full height of header */
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+  padding: 0 25px; /* Wider tabs */
+  height: 100%;    /* Fills the height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.1s;
+  border: none;
+  background: transparent;
+  font-weight: 400;
+}
+
+/* Hover state for non-active links */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ACTIVE STATE: Full White Block, Green Text */
+.active-white {
+  background-color: white !important;
+  color: #9cd05d !important;
+  font-weight: 500;
+}
+
+.arrow {
+  font-size: 10px;
+  margin-left: 6px;
+  position: relative;
+  top: 1px;
+}
+
+/* Dropdown Wrapper */
+.nav-dropdown-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  padding: 12px 15px;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  background-color: white;
+}
+
+.dropdown-item:hover {
+  background-color: #2e7bb6;
+  color: white;
+}

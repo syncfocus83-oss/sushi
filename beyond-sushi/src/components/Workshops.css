@@ -1,0 +1,135 @@
+.workshops {
+  background-color: var(--white);
+}
+
+.workshop-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.workshop-info h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.workshop-info p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.workshop-features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.workshop-features li {
+  padding: 0.75rem 0;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.workshop-cta {
+  margin-top: 2rem;
+}
+
+.workshop-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.placeholder-icon {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.image-placeholder p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.cookbook-promo {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--accent-color) 0%, #ff8555 100%);
+  color: var(--white);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.cookbook-promo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.cookbook-promo p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .workshop-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .image-placeholder {
+    height: 300px;
+  }
+
+  .placeholder-icon {
+    font-size: 4rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .workshop-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .workshop-features li {
+    font-size: 0.95rem;
+  }
+
+  .image-placeholder {
+    height: 250px;
+  }
+
+  .placeholder-icon {
+    font-size: 3rem;
+  }
+
+  .cookbook-promo {
+    padding: 1.5rem;
+  }
+
+  .cookbook-promo h3 {
+    font-size: 1.4rem;
+  }
+
+  .cookbook-promo p {
+    font-size: 1rem;
+  }
+}

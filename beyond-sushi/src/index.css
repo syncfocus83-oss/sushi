@@ -1,0 +1,25 @@
+:root {
+  --color-primary-green: #9cd05d;
+  --color-bg-beige: #fceeb5;
+  --color-bg-pink: #e0acba;
+  --color-bg-blue: #bce6f7;
+  --color-text-dark: #4a4a4a;
+  --color-text-brown: #5d4037;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #e0e0e0; /* The grey gutters */
+  min-height: 100vh;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; outline: none; }

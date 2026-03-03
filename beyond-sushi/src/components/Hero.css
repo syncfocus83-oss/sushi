@@ -1,0 +1,149 @@
+.hero {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+
+  background-image: url('/Homepage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--white);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Overlay exact afgestemd op header */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(124, 179, 66, 0.92) 0%,
+    rgba(76, 140, 41, 0.85) 40%,
+    rgba(45, 80, 22, 0.85) 100%
+  );
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2.5rem;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Primary */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #e55a2b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Secondary */
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 520px;
+    margin-top: 75px;
+  }
+
+  .hero h2 {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 460px;
+    margin-top: 70px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
